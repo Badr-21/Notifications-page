@@ -1,0 +1,191 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    /*## Colors
+    ### Primary*/
+    --Red: hsl(1, 90%, 64%);
+    --Blue: hsl(219, 85%, 26%);
+    /*### Neutral*/
+    --White: hsl(0, 0%, 100%);
+    --Very-light-grayish-blue: hsl(210, 60%, 98%);
+    --Light-grayish-blue-1: hsl(211, 68%, 94%);
+    --Light-grayish-blue-2: hsl(205, 33%, 90%);
+    --Grayish-blue: hsl(219, 14%, 63%);
+    --Dark-grayish-blue: hsl(219, 12%, 42%);
+    --Very-dark-blue: hsl(224, 21%, 14%);
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    width: 100vw;
+    padding: 2rem 0;
+    background-color: var(--Very-light-grayish-blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    overflow-x: hidden;
+}
+
+.container {
+    width: 44rem;
+    padding: 2rem;
+    background-color: var(--White);
+}
+
+.container .notification-number-mark-all {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.container .notification-number-mark-all .notification-number {
+    display: flex;
+    align-items: center;
+}
+
+.container .notification-number-mark-all .notification-number h1 {
+    color: var(--Very-dark-blue);
+    font-weight: 800;
+}
+
+.container .notification-number-mark-all .notification-number .number {
+    width: 1.5rem;
+    height: 1.3rem;
+    background-color: var(--Blue);
+    color: white;
+    font-weight: 800;
+    border-radius: .2rem;
+    margin-left: .8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .notification-number-mark-all .mark-all {
+    font-weight: 500;
+    color: var(--Dark-grayish-blue);
+}
+
+.container .notification-content .content {
+    padding: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: .5rem;
+}
+
+.notification-content .content.unread{
+    background-color: var(--Very-light-grayish-blue);
+    
+}
+
+.notification-content .content.unread .content-type-time .unread-point {
+    display: inline-block;
+    width: .5rem;
+    height: .5rem;
+    margin-left: .5rem;
+    background-color: var(--Red);
+    border-radius: 50%;
+}
+
+.container .notification-content .content .image {
+    width: 5.5rem;
+}
+
+.container .notification-content .content .image img {
+    width: 2.6rem;
+}
+
+.container .notification-content .content .content-type-time {
+    width: 90%;
+    color: var(--Dark-grayish-blue);
+    margin-left: -2rem;
+}
+
+.container .notification-content .content:nth-child(5) .content-type-time {
+    width: 80%;
+}
+
+.container .notification-content .content .content-type-time .name{
+    color: var(--Very-dark-blue);
+    font-weight: 800;
+    margin-right: .2rem;
+}
+
+.container .notification-content .content .content-type-time .time {
+    color: var(--Grayish-blue);
+}
+
+.container .notification-content .content .content-type-time .reacted {
+    color: var(--Very-dark-blue);
+    font-weight: 500;
+    margin-left: .2rem;
+}
+
+.container .notification-content .content .content-type-time .group {
+    color: var(--Blue);
+    font-weight: 800;
+    margin-left: .2rem;
+}
+
+.container .notification-content .content .message {
+    padding: 1rem;
+    margin-top: 1rem;
+    margin-left: 3.5rem;
+    color: var(--Dark-grayish-blue);
+    border: .1rem solid var(--Light-grayish-blue-1);
+}
+
+.container .notification-content .content .picture img {
+    width: 2.6rem;
+}
+
+@media(hover: hover) {
+    .container .notification-number-mark-all .mark-all:hover,
+    .container .notification-content .content .content-type-time .name:hover,
+    .container .notification-content .content .content-type-time .reacted:hover,
+    .container .notification-content .content .content-type-time .group:hover {
+        cursor: pointer;
+        color: var(--Blue);
+    }
+
+    .container .notification-content .content .picture img:hover {
+        cursor: pointer;
+    }
+
+    .container .notification-content .content .message:hover {
+        cursor: pointer;
+        background-color: var(--Light-grayish-blue-2);
+    }
+}
+
+@media(max-width: 655px) {
+    .container .notification-content .content .content-type-time {
+        width: 75%;
+    }
+
+    .container .notification-content .content .content-type-time {
+        width: 75%;
+    }
+
+}
+
+@media(max-width: 375px) {
+    body {
+        width: 100%;
+    }
+
+    .container {
+        padding: 2rem 1rem;
+    }
+
+    .container .notification-content .content .content-type-time {
+        width: 75%;
+    }
+
+    .container .notification-content .content:nth-child(5) .content-type-time {
+        width: 75%;
+    }
+}
